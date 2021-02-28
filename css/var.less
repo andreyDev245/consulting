@@ -1,0 +1,41 @@
+
+// var color  
+
+@white-background:#fff;
+@black-background:#000;
+@main-background: rgba(17, 64, 88, .7);
+@blueGreen: #2c4a52;
+@lightBlueGreen: #537072;
+@greenGrey: #8e9b97;
+@whiteGrey: #eafaf8;
+
+@opacityLightBlue: fadeout(@lightBlueGreen, 50%);
+@blackHover: darken(@lightBlueGreen, 10%);
+@blackFocus: darken(@lightBlueGreen, 15%);
+
+// var color fonts
+
+@main-fontColor: #2a2a2a;
+@white-fontColor: #fff;
+@color-title: #305365;
+@font-gold: #d78e09;
+
+// var size font
+@main-size:16px;
+@smallTitle-size: 20px;
+@mediumTitle-size: 35px;
+@font-forty: 40px;
+@largeTitle-size: 50px;
+
+// (:extend) for element button
+
+.flex-sp-between{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex-col-sp-between{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}

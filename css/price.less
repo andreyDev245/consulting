@@ -1,0 +1,114 @@
+//  style for section how do we work
+
+.price{
+    padding: 80px 10px 150px;
+    background-color: rgba(17, 64, 88, .7);
+    background: linear-gradient(45deg, rgba(59, 109, 134, .8), rgba(17, 64, 88, .9)),
+                url("../img/background-img/img110823.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.price_block_title{
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    color: @whiteGrey;
+    margin-bottom: 100px;
+
+    .price_title{
+        color: @whiteGrey;
+        margin-bottom: 40px;
+    }
+    .price_title.all_title::before,
+    .price_title.all_title::after{
+        background-color: @whiteGrey;
+    }
+}
+
+.work_inner:extend(.flex-sp-between){
+    justify-content: space-around;
+
+    .card{
+        padding: 30px 10px;
+        border-radius: 3px;
+        width: 300px;
+        min-height: 500px;
+        text-align: center;
+        box-shadow: 3px 3px 10px #fff;
+        position: relative;
+        transition: transform 0.3s;
+
+        background:@whiteGrey radial-gradient(circle at center 125%, rgba(215,142,9,1) 31%, rgba(215,142,9,0.20772058823529416) 31%, rgba(215,142,9,0) 36%);
+
+        .card_item_title{
+            font-size: 28px;
+            text-transform: uppercase;
+            color: @color-title;
+            margin-bottom: 20px;
+        }
+
+        .card_status,
+        .card_item_time{
+            font-size: 12px;
+        }
+
+        .card_price_item{
+            font-family: 'Rubik-medium', sans-serif;
+            font-size: @mediumTitle-size;
+            color: @font-gold; 
+            margin: 30px 0 10px;
+        }
+
+        .card_list:extend(.flex-col-sp-between){
+            margin-top: 30px;
+            align-items: center;
+
+
+            .card_list_item{
+                position: relative;
+                padding-left: 20px;
+            }
+            .card_list_item:not(:last-child){
+                margin-bottom: 10px;
+            }
+        }
+
+        .card_list_item::before{
+            content: "";
+            position: absolute;
+            top: 25%;
+            left: 0;
+            width: 10px;
+            height: 5px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: transparent transparent #008000  #008000;
+            transform: rotate(-45deg);
+        }
+
+        .card_btn{
+            font-family: 'Rubik-medium', sans-serif;
+            font-size: @smallTitle-size;
+            color: @color-title;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: -17px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0.5em 1.2em;
+            border-radius: 20px;
+            background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+        }
+
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

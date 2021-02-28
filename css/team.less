@@ -1,0 +1,102 @@
+//  style for section our team
+
+.team_page{
+    padding: 80px 10px 130px;
+    overflow: hidden;
+}
+
+.team_page_title{
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    .team_title{
+        margin-bottom: 50px;
+    }
+    .team_page_text{
+        color: @color-title;
+    }
+}
+
+.team_page_inner:extend(.flex-sp-between){
+
+    .team_page_item{
+        width: 280px;
+        box-shadow: 5px 5px 10px #2c4a52;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px 5px 10px 10px;
+
+        .team_page_img_box{
+            width: 100%;
+            height:300px;
+            position: relative;
+            overflow: hidden;
+            .team_page_img{
+                width: 100%;
+                height: 100%;
+            } 
+        }
+
+        .team_page_item_content{
+            border-radius: 10px;
+            padding: 20px;
+            background: linear-gradient(to bottom, rgba(143,174,186,0.7) 0%, rgba(44,74,82,0.5) 50%, rgba(147,178,189,0.3) 100%);
+        }
+
+        .team_page_item_title{
+            font-family: 'Rubik-medium', sans-serif;
+            font-size: @smallTitle-size;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.team_page_social{
+    position: absolute;
+    padding-top: 10px;
+    width: 95%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: @opacityLightBlue;
+
+    .team_page_social_link{
+        display:block;
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        transform: translateY(-200px);
+        transition: transform .3s;
+
+        .team_page_link_img{
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover{
+            filter: drop-shadow(0 0 5px @blueGreen);
+        }
+    }
+}
+
+.team_page_item:hover .team_page_social_link:last-child{
+    transform: translateY(0);
+    
+}
+.team_page_item:hover .team_page_social_link:nth-child(3){
+    transform: translateY(0);
+    transition-delay: .1s;
+}
+.team_page_item:hover .team_page_social_link:nth-child(2){
+    transform: translateY(0);
+    transition-delay: .2s;
+}
+.team_page_item:hover .team_page_social_link:first-child{
+    transform: translateY(0);
+    transition-delay: .3s;
+}

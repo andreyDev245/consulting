@@ -1,0 +1,489 @@
+
+//  responsive style for header
+@media(max-width: 1170px){
+
+    .header_content{
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+@media(max-width:970px){
+    .owl-dots{
+        left: 50%;
+        top: auto;
+        bottom: 40px;
+        margin: auto;
+        transform: translateY(0);
+        transform: translate(-50%);
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .owl-carousel button.owl-dot + button.owl-dot{
+        margin-left: 15px;
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 850px){
+    
+    .menu{
+        display: none;
+    }
+
+    .top_header .block_menu{
+        width: auto;
+    }
+
+    .top_header .logo {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .block_info{
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .block_contact{
+        text-align: right;
+        margin-top: 20px;
+    }
+
+    .block_info .block_contact .block_contact_link{
+        display: block;
+    }
+
+    .block_info .block_contact .block_contact_link:first-child{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .block_mobile_menu{
+        display: block;
+    }
+
+    .header_content .title_header{
+        font-size: 43px;
+    }
+}
+
+@media(max-width: 640px){
+
+    .top_header .block_menu{
+        display: none;
+    }
+
+    .header_content .title_header{
+        font-size: 35px;
+    }
+
+    .header_content .header_block_btn .block_btn_item{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 470px){
+
+    .header_content .title_header{
+        font-size: 25px;
+    }
+
+    .header_content .header_content_text{
+        font-size: 16px;
+    }
+
+    .header_content .header_block_btn .block_btn_item{
+        font-size: 14px;
+    }
+
+    .header_content .header_block_btn .block_btn_item:first-child{
+        margin-right: 20px;
+    }
+}
+
+
+//  responsive for section features
+
+@media(max-width: 850px){
+
+    .aboutUs{
+        padding: 80px 10px 80px;  
+    }
+
+    .aboutUs_inner{
+        flex-direction: column;
+
+        .aboutUs_block_img{
+            align-self: center;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+    .accordion_block .accordion_title{
+        text-align: center;
+    }
+
+    .accordion_block{
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 680px){
+
+    .aboutUs{
+        padding: 50px 10px 60px;  
+    }
+
+    .aboutUs_inner .accordion_block,
+    .aboutUs_inner .aboutUs_block_img{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 450px){
+    .aboutUs .aboutUs_title{
+        font-size: 30px;
+    }
+    .aboutUs_inner .accordion_block .accordion_btn_item{
+        font-size: 11px;
+    }
+    
+}
+
+// responsive for section price
+
+@media(max-width: 1050px){
+
+    .price{
+        padding: 80px 10px 80px;  
+    }
+
+    .price_block_title{
+        margin-bottom: 50px;
+    }
+
+    .work_inner{
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .work_inner .card:not(:last-child){
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 700px){
+
+    .work_inner .card:hover{
+        transform: none;
+    }
+    .price{
+        padding: 50px 10px 80px;  
+    }
+    .work_inner{
+        max-width: 500px;
+    }
+
+    .work_inner .card:not(:last-child){
+        margin-right: 0;
+    }
+}
+
+
+//  responsive style for section service
+
+@media(max-width: 1170px){
+
+    .service{
+        padding: 50px 10px;
+    }
+
+    .service_inner{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 780px){
+    .service_inner{
+        max-width: 600px;
+    }
+}
+
+@media(max-width: 450px){
+    .service_inner .service_inner_item{
+        padding: 25px 15px;
+    }
+}
+
+// responsive for section progress
+
+@media(max-width: 850px){
+    .progress_inner{
+        flex-wrap: wrap;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .progress_inner .circle_box_wrap:nth-child(odd){
+        margin-right: 50px;
+    }
+
+    .progress_inner .circle_box_wrap:first-child,
+    .progress_inner .circle_box_wrap:nth-child(2){
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 600px){
+    .progress_inner{
+        max-width: 300px;
+    }
+
+    .progress_inner .circle_box_wrap:nth-child(odd){
+        margin-right: 0;
+    }
+
+    .progress_inner .circle_box_wrap:not(:last-child){
+        margin-bottom: 50px;
+    }
+}
+
+
+//  responsive section our team
+
+@media(max-width: 1235px){
+
+    .team_page{
+        padding: 80px 10px 80px;
+    }
+
+    .team_page_inner{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .team_page_inner .team_page_item:first-child,
+    .team_page_inner .team_page_item:nth-child(2){
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 650px){
+
+    .team_page{
+        padding: 50px 10px 50px;
+    }
+    .team_page_inner{
+        max-width: 500px;
+    }
+    .team_page_inner .team_page_item{
+        margin-bottom: 30px;
+    }
+}
+
+// responsive style for section news
+
+@media(max-width: 900px){
+    .news{
+        padding: 50px 10px 80px;
+        background-size: cover;
+    }
+}
+
+@media(max-width: 650px){
+    .news_inner_item{
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .news_inner_item .news_item_block_img{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .news_inner_item:nth-child(2) .news_item_block_img, .news_inner_item:last-child .news_item_block_img{
+        margin-left: 0;
+        order: 0;
+    }
+
+    .news_inner_item:nth-child(2), .news_inner_item:last-child{
+        align-self: center;
+    }
+
+    .news_item_content{
+        text-align: center;
+    }
+}
+
+@media(max-width: 450px){
+    .news_inner_item .news_item_block_img::after{
+        display: none;
+    }
+}
+
+//  responsive section contact us
+
+@media(max-width: 1000px){
+
+    .contact{
+        padding: 50px 10px 70px;
+        background-position: center top;
+        background-size: 100% 44%;
+    }
+    .contact_block .contact_title.all_title:before, .contact_block .contact_title.all_title::after{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .contact_inner{
+        flex-direction: column;
+    }
+
+    .contact_block .contact_title,
+    .contact_block .contact_title_text,
+    .contact_address{
+        text-align: center;
+    }
+
+    .contact_title_text{
+        margin: 0 auto;
+    }
+    .contact_inner_title{
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .contact_address_content_item{
+        align-items: center;
+    }
+}
+
+@media(max-width: 550px){
+
+    .contact_inner_title{
+        min-width: auto;
+    }
+
+    .contact_address_links .contact_links_btn:not(:last-child){
+        margin-right: 10px;
+    }
+    .contact_address_links .contact_links_btn{
+        font-size: 16px;
+    }
+
+    .contact_form{
+        padding: 30px 15px 40px;
+    }
+
+    .contact_form .contact_form_input{
+        padding: 17px 12px;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 400px){
+
+    .contact_address_links .contact_links_btn{
+        font-size: 14px;
+    }
+}
+
+// responsive footer
+
+@media(max-width: 1120px){
+
+    .page_footer{
+        padding-top: 50px;
+    }
+
+    .copyright{
+        margin-top: 50px;
+    }
+
+    .page_footer_inner{
+        flex-wrap: wrap;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    
+    .about_footer,
+    .useful_links{
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 640px){
+    .page_footer_inner{
+        max-width: 550px;
+    }
+
+    .about_footer .about_footer_title::after{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .information{
+        margin-bottom: 30px;
+    }
+
+    .about_footer,
+    .useful_links,
+    .information{
+        margin-right: 0;
+    }
+
+    .about_footer_item{
+        width: 100%;
+    }
+    .about_footer{
+        margin: 0 auto;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .about_footer .about_footer_list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hours_block{
+        margin: 0 auto;
+    }
+
+    .copyright_inner{
+        flex-direction: column;
+    }
+    .copyright_item{
+        width: 100%;
+    }
+
+    .copyright_text{
+        order: 1;
+    }
+
+    .copyright_item:not(:first-child){
+        margin-bottom: 20px;
+    }
+
+   
+}
+
+@media(max-width: 400px){
+    .inf_title,
+    .useful_title{
+        font-size: 16px;
+    }
+}

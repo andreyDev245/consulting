@@ -1,0 +1,79 @@
+//  style for section service
+
+.service{
+    padding: 80px 10px;
+    overflow: hidden;
+}
+
+
+.service_block_title{
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    .service_text{
+        color: @color-title;
+    }
+
+    .service_title{
+        margin-bottom: 50px;
+    }
+}
+
+.service_inner:extend(.flex-sp-between){
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    .service_inner_item{
+        max-width: 350px;
+        padding: 25px 20px;
+        background-color: @white-fontColor;
+        box-shadow: 5px 5px 10px #2c4a52;
+        border-radius: 3px;
+        margin-bottom: 40px;
+        cursor: pointer;
+        
+
+        .service_item_title{
+            font-family: 'Rubik-medium', sans-serif;
+            font-size: @smallTitle-size;
+            color: @color-title;
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .service_item_title::before{
+            content: "";
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: url("../img/logo/consult.svg")no-repeat;
+        }
+    }
+
+    .service_inner_item:nth-child(2) .service_item_title::before{
+        content: "";
+        background: url("../img/logo/budget.svg")no-repeat;
+    }
+    .service_inner_item:nth-child(3) .service_item_title::before{
+        content: "";
+        background: url("../img/logo//stock-market.svg")no-repeat;
+    }
+    .service_inner_item:nth-child(4) .service_item_title::before{
+        content: "";
+        background: url("../img/logo/crm.svg")no-repeat;
+    }
+    .service_inner_item:nth-child(5) .service_item_title::before{
+        content: "";
+        background: url("../img/logo/temporary-agency.svg")no-repeat;
+    }
+    .service_inner_item:last-child .service_item_title::before{
+        content: "";
+        background: url("../img/logo/reward.svg")no-repeat;
+    }
+}

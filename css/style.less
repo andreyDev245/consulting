@@ -1,0 +1,218 @@
+a{text-decoration:none;}ul,dl{margin:0;padding:0;}li{list-style:none;}
+*,*:after,*:before{box-sizing: border-box;}h1,h2,h3,h4,p,dd{margin:0;}button{outline:none;}
+a{-webkit-tap-highlight-color:transparent;}
+
+
+html,
+body{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Rubik-regular', sans-serif;
+    padding: 0;
+    margin: 0;
+    min-width: 320px;
+    color: @main-fontColor;
+}
+
+.body--active{
+    overflow: hidden;
+}
+
+a{
+    color: @main-fontColor;
+}
+
+button{
+    border: 0;
+    background: none;
+    padding: 0;
+    outline: 0;
+    color: inherit;
+    cursor: pointer;
+}
+
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+h2,h3,h4{
+    letter-spacing: 0.04em;
+}
+
+.all_title{
+    font-family: 'Rubik-bold', sans-serif;
+    font-size: @mediumTitle-size;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;    
+    color: @color-title;
+    position: relative;
+}
+
+.all_title::before{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: @color-title;
+    border-radius: 15px;
+}
+.all_title::after{
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background-color: @color-title;
+    border-radius: 15px;
+}
+
+
+//  style for block modal
+
+.modal_page{
+    display: none;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: @opacityLightBlue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+
+    
+
+    .modal{
+        max-width: 400px;
+        min-width: 300px;
+        height: 465px;
+        background-color: #fff;
+        padding: 30px 15px 50px;
+        border-radius: 5px;
+        margin: auto;
+    
+        .contact_form_title{
+            font-family: 'Rubik-bold', sans-serif;
+            font-size: @mediumTitle-size;
+            text-align: center;
+            color: @color-title;
+            margin-bottom: 10px;
+        }
+
+        .modal_input{
+            font-family: 'Rubik-regular', sans-serif;
+            font-size: 18px;
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #afbfba;
+            border-radius: 3px;
+        }
+        .modal_input::placeholder{
+            color: @greenGrey;
+        }
+        .modal_input:not(:last-child){
+            margin-bottom: 20px;
+        }
+
+        .modal_text{
+            height: 120px;
+            resize: none;
+        }
+
+        .modal_btn{
+            font-family: 'Rubik-regular', sans-serif;
+            font-size: 18px;
+            width: 100%;
+            padding: 1em;
+            border: none;
+            border-radius: 3px;
+            background-color: @blueGreen;
+            color: @whiteGrey;
+            cursor: pointer;
+        }
+    }
+
+    .close_modal{
+        width: 20px;
+        height: 20px;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+        transition: transform 1s;
+    }
+    .close_modal:hover{
+        transform: rotate(360deg);
+    }
+}
+
+.modal_page--active{
+    display: flex;
+}
+
+// button scroll to top
+.btn_scroll_top{
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: @lightBlueGreen;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 500;
+    
+	.scroll_arrow{
+        display: inline-block;
+        margin-top: 21px;
+        width: 20px;
+        height: 20px;
+        border-width: 3px;
+        border-style: solid;
+        border-color: @whiteGrey @whiteGrey transparent transparent;
+        transform: rotate(-45deg);
+    }
+
+    animation-name: blink;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink{
+    0%{
+        box-shadow: 0 0 0 0px rgba(83, 112, 114, 0.4);
+    }
+    100%{
+        box-shadow: 0 0 0 20px rgba(83, 112, 114, 0);
+    }
+}
+
+.btn_scroll--active{
+    display: block;
+}
+
+@import url("var");
+@import url("header");
+@import url("about");
+@import url("price");
+@import url("service");
+@import url("progress");
+@import url("team");
+@import url("news");
+@import url("contact");
+@import url("footer");
+@import url("responsive");
+
+

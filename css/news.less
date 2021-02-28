@@ -1,0 +1,135 @@
+//  style for section news
+
+.news{
+    padding: 80px 10px;
+    background: @main-background;
+    background: linear-gradient(45deg, rgba(59, 109, 134, .8), rgba(17, 64, 88, .9)),
+                url("../img/background-img/hands.jpg")no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.news_title_block{
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    color: @main-fontColor;
+}
+
+.news_title,
+.news_title_text{
+    color: @whiteGrey;
+}
+.news_title.all_title{
+    margin-bottom: 50px;
+}
+
+.news_title.all_title::after,
+.news_title.all_title::before{
+    background-color: #37424c;
+}
+
+.news_inner{
+    &:extend(.flex-col-sp-between);
+}
+
+.news_inner_item:extend(.flex-sp-between){
+    max-width: 950px;
+    width: 100%;
+    align-self: flex-start;
+    
+    .news_item_block_img{
+        max-width: 350px;
+        min-width: 250px;
+        width:100%;
+        margin-right: 50px;
+        max-height: 250px;
+        line-height: 0;
+        position: relative;
+        border-radius: 5px;
+        transition: 0.3s linear;
+
+        .news_item_img{
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    .news_item_block_img::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: @blueGreen;
+        border-radius: 5px;
+    }
+}
+
+.news_inner_item:nth-child(odd) .news_item_block_img::after{
+    top: 15px;
+    left: 15px;
+}
+.news_inner_item:nth-child(even) .news_item_block_img::after{
+    top: 15px;
+    left: -15px;
+}
+
+.news_inner_item:not(:last-child){
+    margin-bottom: 50px;
+}
+
+.news_item_content{
+    max-width: 550px;
+    width: 100%;
+    color: @whiteGrey;
+
+    .news_item_time{
+        font-family: 'barlow-medium', sans-serif;
+        font-size: 14px;
+        letter-spacing: .07em;
+        padding-left: 25px;
+        position: relative;
+    }
+
+    .news_item_time::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 18px;
+        height: 15px;
+        transform: translateY(-50%);
+        background: url("../img/logo/calendar.svg")no-repeat;
+    }
+
+    .news_inner_item_title{
+        font-family: 'Rubik-medium', sans-serif;
+        font-size: @smallTitle-size;
+        margin: 10px 0 20px;
+    }
+
+    .news_inner_item_text{
+        letter-spacing: 0.04em;
+        line-height: 25px;
+    }
+}
+
+.news_inner_item:nth-child(2),
+.news_inner_item:last-child{
+    align-self: flex-end;
+    
+    .news_item_block_img{
+        order: 1;
+        margin-left: 50px;
+        margin-right: 0;
+    }
+}

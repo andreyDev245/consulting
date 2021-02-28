@@ -1,0 +1,12 @@
+<svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="17" width="17" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#ffffff" rx="1" id="svg_2" height="3" width="14.5" y="6" x="0.25" stroke-opacity="null" stroke-width="null" fill="#ffffff"/>
+  <rect stroke="#ffffff" rx="1" id="svg_3" height="14.25" width="3" y="15.5" x="-38.375" stroke-opacity="null" stroke-width="null" fill="#ffffff"/>
+ </g>
+</svg>

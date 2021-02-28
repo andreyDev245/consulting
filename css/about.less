@@ -1,0 +1,90 @@
+
+//  styles for section about us
+
+.aboutUs{
+    padding: 80px 10px 50px;
+    min-height: 700px;
+    .aboutUs_title{
+        margin-bottom: 70px;
+    }
+    background: url("../img/background-img/about.svg")no-repeat;
+    background-position: left top;
+    background-size: contain;
+    overflow: hidden;
+}
+
+
+.aboutUs_inner:extend(.flex-sp-between){
+    align-items: flex-start;
+
+    .aboutUs_block_img{
+        align-self: flex-start;
+        max-width: 540px;
+        height: auto;
+        margin-right: 20px;
+        line-height: 0;
+        .aboutUs_block_inner_img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.accordion_block{
+    width: 600px;
+    padding: 35px 15px 50px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px @blueGreen;
+    background-color: @white-background;
+}
+
+.accordion_title{
+    font-family: 'Rubik-medium', sans-serif;
+    font-size: @smallTitle-size;
+    color: @color-title;
+    text-transform: uppercase; 
+    margin-bottom: 30px;
+}
+
+.accordion_item:not(:first-child){
+    margin-top: 20px;
+}
+
+.accordion_btn_item{
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    padding-left: 40px;
+    background-color: @blueGreen;
+    color: @white-fontColor;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    border-radius: 3px;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        background: url("../img/logo/plus.svg")no-repeat;
+    }
+}
+
+.accordion_btn_item--active::before{
+    background: url("../img/logo/minus.svg")no-repeat;
+}
+
+.accordion_content{
+    display: none;
+    padding: 15px 20px;
+    background-color: @lightBlueGreen;
+    color: @white-fontColor;
+    font-size: 13px;
+    letter-spacing: 0.09em;
+    margin-top: -2px;
+}

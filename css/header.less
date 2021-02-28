@@ -1,0 +1,288 @@
+
+//  style for section header
+
+.page-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 580px;
+    background-color: @greenGrey;
+}
+
+.inner_header_page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.top_header:extend(.flex-sp-between){
+    padding: 10px 10px 0;
+    position: relative;
+    z-index: 7;
+    min-height: 120px;
+
+    .logo{
+        width: 170px;
+        height: auto;
+        .logo_img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .block_menu:extend(.flex-col-sp-between){
+        
+        width: 670px;
+
+        .menu_list:extend(.flex-sp-between){
+            background-color: @opacityLightBlue;
+            margin-top: 10px;
+            border-radius: 3px;
+            padding: 7px 15px;
+            .menu_list_link{
+                font-family: 'Rubik-medium', sans-serif;
+                display: inline-block;
+                padding: 5px 15px;
+                color: @white-fontColor; 
+                text-transform: uppercase;
+            }
+        }
+
+    }
+}
+.menu_list_item{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.line_gradient::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(126deg, rgba(253,29,29,0) 23%, rgba(185,209,210,0.31976540616246496) 51%, rgba(252,176,69,0) 77%);
+    cursor: pointer;
+    
+}
+
+.line_gradient:hover::before{
+    left: 100%;
+    transition: left 0.5s;
+}
+
+.block_mobile_menu{
+    display: none;
+    line-height: 0;
+
+    .mobile_btn{
+        width: 40px;
+        height: 40px;
+
+        .mobile_btn_img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .mobile_menu{
+        background-color: @lightBlueGreen;
+        width: 300px;
+        border-radius: 3px;
+        line-height: normal;
+
+        .mobile_menu_link{
+            display: block;
+            padding: 15px 20px 15px 40px;
+            color: @white-fontColor;
+            background: @lightBlueGreen url("../img/logo/play.svg")no-repeat;
+            background-size: 10px 10px;
+            background-position: 10px center;
+            box-shadow: inset 0px -4px 9px -3px rgba(50, 50, 50, 0.75);
+            transition: background-color 0.3s;
+
+            &:focus{
+                background-color: @blackFocus;
+            }
+            &:hover{
+                background-color: @blackHover;
+            }
+        }
+        
+    }
+}
+
+.wrap_mobile_menu{
+    display: none;
+    background-color: @lightBlueGreen;
+    position: absolute;
+    z-index: 55;
+}
+
+.block_info.block_info_mobile{
+    align-items: center;
+    margin-top: 20px;
+}
+.wrap_mobile_menu.wrap_mobile_menu--active{
+    display: block;
+}
+
+.block_info:extend(.flex-sp-between){
+
+    padding: 7px 15px;
+     
+    .social{
+    line-height: 0;    
+    }
+
+    .social_limk{
+        display:inline-block;
+        width: 30px;
+        height:30px;
+        transition: filter 0.3s;
+        .social_link_img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .social_limk:hover{
+        filter: drop-shadow(0 0 5px @blueGreen);
+    }
+
+    .social_limk + .social_limk{
+        margin-left: 15px;
+    }
+
+
+    .block_contact{
+        .block_contact_link{
+            display: inline-block;
+            color: @white-fontColor;
+            padding-left: 25px;
+            position: relative;
+            letter-spacing: 0.07em;
+            line-height: 20px;
+            border-bottom: 1px solid transparent;
+
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 15px;
+                height: 15px;
+                background: url("../img/logo/phone.svg")no-repeat;
+            }
+        }
+        .block_contact_link:hover{
+            border-bottom: 1px solid @white-fontColor;
+        }
+
+        .block_contact_link:first-child{
+            margin-right: 20px;
+            &::before{
+                content: "";
+                background: url("../img/logo/email.svg")no-repeat;
+            }
+        }    
+    }
+}
+
+.header_content{
+    max-width: 700px;
+    width: 100%;
+    padding: 0 10px;
+    color: @white-fontColor;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    
+    .title_header{
+        font-family: 'Rubik-bold', sans-serif;
+        font-size: @largeTitle-size;
+    }
+
+    .header_content_text{
+        font-size: @smallTitle-size;
+        margin-top: 25px;
+        letter-spacing: 0.03em; 
+    }
+
+    .header_block_btn{
+        margin-top: 40px;
+
+        .block_btn_item{
+            font-size: @smallTitle-size;
+            padding: 0.5em 1em;
+            background-color: @blueGreen;
+            transition: background-color 0.3s;
+            border-radius: 3px;
+            text-transform: uppercase;
+            color: @whiteGrey;
+            &:hover{
+               background-color: @lightBlueGreen; 
+            }
+        }
+
+        .block_btn_item:first-child{
+            margin-right: 30px;
+        }
+    }
+}
+
+// style for block slide
+
+.header_slide{
+    width: 100%;
+    height: 100%;
+}
+
+.owl-carousel .owl-stage-outer,
+.owl-carousel .owl-stage,
+.owl-carousel.owl-drag .owl-item,
+.owl-carousel .item_slide,
+.owl-carousel .item_slide_img{
+    height: 100%;
+}
+
+
+.item_slide_img{
+    width: 100%;
+    height: 100%;
+    max-height: none !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.owl-dots:extend(.flex-col-sp-between){
+    position: absolute;
+    display: flex;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-carousel button.owl-dot{
+    border: 1px solid @whiteGrey;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;    
+}
+
+.owl-carousel button.owl-dot + button.owl-dot{
+    margin-top: 10px;
+}
+
+.owl-carousel button.owl-dot.active{
+    background-color: @greenGrey;
+    border-color: @greenGrey;
+}

@@ -1,0 +1,192 @@
+//  style section footer
+
+.page_footer{
+    padding-top: 80px;
+    color: @whiteGrey;
+    background-color: @blueGreen;
+    background: @main-background;
+    background: linear-gradient(45deg, rgba(59, 109, 134, .9), rgba(17, 64, 88, .9)),
+                url("../img/background-img/img110835.jpg")no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.page_footer_inner{
+    padding: 0 10px;
+    &:extend(.flex-sp-between);
+}
+
+.about_footer_title,
+.footer_list_title{
+    font-family: 'Rubik-bold', sans-serif;
+    font-size: @smallTitle-size;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.page_footer_inner .useful_links .footer_list_title,
+.page_footer_inner .information .footer_list_title{
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+}
+
+.about_footer_title{
+    margin-bottom: 30px;
+}
+
+.about_footer,
+.useful_links,
+.information{
+    margin-right: 20px;
+}
+
+.about_footer{
+    max-width: 400px;
+    width: 100%;
+    
+    .about_footer_title::after{
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 50px;
+        height: 5px;
+        background: rgb(2,0,36);
+        background: linear-gradient(126deg, rgba(2,0,36,0) 13%, rgba(244,235,219,1) 13%, rgba(244,235,219,1) 89%, rgba(0,212,255,0) 89%);
+    }
+
+    .about_footer_text{
+        letter-spacing: 0.04em;
+    }
+
+    .about_footer_list{
+        margin-top: 30px;
+
+        .about_footer_item:not(:last-child){
+            margin-bottom: 15px;
+        }
+
+        .about_footer_link{
+            display: inline-block;
+            color: @whiteGrey;
+            padding-left: 30px;
+            position: relative;
+        }
+    }
+}
+
+
+.about_footer_link::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.about_footer_item:first-child .about_footer_link::before{
+    background: url("../img/logo/placeholder.svg")no-repeat;
+}
+.about_footer_item:nth-child(2) .about_footer_link::before{
+    background: url("../img/logo/email.svg")no-repeat;
+}
+.about_footer_item:last-child .about_footer_link::before{
+    background: url("../img/logo/phone.svg")no-repeat;
+}
+
+.useful_links > li > a,
+.information > li > a{
+    color: @whiteGrey;
+    padding-left: 20px;
+    position: relative;
+} 
+
+.useful_links > li > a::before,
+.information > li > a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 10px;
+    height: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent transparent @whiteGrey @whiteGrey;
+}
+
+.useful_links > li:not(:last-child),
+.information > li:not(:last-child),
+.hours_block_list > li:not(:last-child){
+    margin-bottom: 10px;
+} 
+
+
+.hours_block_title{
+    text-align: center;
+}
+
+.hours_block_list{
+    font-family: 'barlow-medium', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    min-width: 250px;
+    border: 1px solid @whiteGrey;
+    border-radius: 20px;
+    padding: 30px 20px;
+}
+
+.hours_block_list > li:last-child{
+    padding-top: 15px;
+    border-top: 1px dashed @whiteGrey;
+    margin-top: 20px;
+    color: @font-gold;
+}
+
+
+.copyright{
+    margin-top: 80px;
+    padding: 20px 10px;
+    background: linear-gradient(to bottom, rgba(77,128,140,1) 0%, rgba(77,128,140,1) 2%, rgba(47,79,87,1) 38%, rgba(47,79,87,1) 64%, rgba(66,111,122,1) 100%);
+
+    .footer_logo{
+        display: inline-block;
+        width: 120px;
+        .logo_img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.copyright_inner{
+    &:extend(.flex-sp-between);
+}
+.copyright_item{
+    width: 33%;
+    text-align: center;
+}
+
+.social_footer{
+    line-height: 0;
+    .footer_social_link{
+        display: inline-block;
+        width: 20px;
+        transition: filter 0.3s;
+        .footer_social_link_img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .footer_social_link:hover{
+        filter: drop-shadow(0 0 5px @whiteGrey);
+    }
+
+    .footer_social_link + .footer_social_link{
+        margin-left: 10px;
+    }
+}
+
+

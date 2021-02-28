@@ -1,0 +1,57 @@
+/* barlow-500 - latin */
+@font-face {
+    font-family: 'barlow-medium';
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/barlow/barlow-v4-latin-500.eot'); /* IE9 Compat Modes */
+    src: local('Barlow Medium'), local('Barlow-Medium'),
+         url('../fonts/barlow/barlow-v4-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/barlow/barlow-v4-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/barlow/barlow-v4-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/barlow/barlow-v4-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/barlow/barlow-v4-latin-500.svg#Barlow') format('svg'); /* Legacy iOS */
+  }
+
+
+/* rubik-regular - latin */
+@font-face {
+     font-family: 'Rubik-regular';
+     font-style: normal;
+     font-weight: 400;
+     font-display: swap;
+     src: url('../fonts/rubik/rubik-v10-latin-regular.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('../fonts/rubik/rubik-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('../fonts/rubik/rubik-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+          url('../fonts/rubik/rubik-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+          url('../fonts/rubik/rubik-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('../fonts/rubik/rubik-v10-latin-regular.svg#Rubik') format('svg'); /* Legacy iOS */
+   }
+   /* rubik-600 - latin */
+   @font-face {
+     font-family: 'Rubik-medium';
+     font-style: normal;
+     font-weight: 600;
+     font-display: swap;
+     src: url('../fonts/rubik/rubik-v10-latin-600.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('../fonts/rubik/rubik-v10-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('../fonts/rubik/rubik-v10-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+          url('../fonts/rubik/rubik-v10-latin-600.woff') format('woff'), /* Modern Browsers */
+          url('../fonts/rubik/rubik-v10-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('../fonts/rubik/rubik-v10-latin-600.svg#Rubik') format('svg'); /* Legacy iOS */
+   }
+   /* rubik-800 - latin */
+   @font-face {
+     font-family: 'Rubik-bold';
+     font-style: normal;
+     font-weight: 800;
+     font-display: swap;
+     src: url('../fonts/rubik/rubik-v10-latin-800.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('../fonts/rubik/rubik-v10-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('../fonts/rubik/rubik-v10-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+          url('../fonts/rubik/rubik-v10-latin-800.woff') format('woff'), /* Modern Browsers */
+          url('../fonts/rubik/rubik-v10-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('../fonts/rubik/rubik-v10-latin-800.svg#Rubik') format('svg'); /* Legacy iOS */
+   }
